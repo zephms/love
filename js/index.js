@@ -24,7 +24,7 @@ var S = {
     if (i !== -1) {
       S.UI.simulate(decodeURI(action).substring(i + 3));
     } else {
-      S.UI.simulate('to start|#time|#bscd 30000||');
+      S.UI.simulate('圣诞|快乐|今天是|我们|在一起|的|#bscd 30000||');
     }
 
     S.Drawing.loop(function () {
@@ -187,7 +187,7 @@ S.UI = (function () {
             
             var say = "永远"
             if (index==30000){
-              say = realday+"天"
+              say = "第"+realday+"天"
             } else if (index == 29999){
               say = "零"
             } else if (index == 29999){

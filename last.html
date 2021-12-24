@@ -3,13 +3,17 @@
     <head>
     <meta charset="utf-8">
  
-    <meta name="description" content="A Christmas tree built out of form elements." />
-    <meta name="author" content="Hakim El Hattab" />
  
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
  
-        <title>DOM Tree</title>
- 
+        <title>爱你~</title>
+ <script>
+   var weses = new Date().getTime()/1000 - 1639238640;
+            var bsaday = 86400;
+            var bsahour = 3600;
+            var realday = parseInt(weses/bsaday)
+            document.title = "我们在一起的第"+realday+"天"
+ </script>
     <!-- <link href="css/domtree.css" rel="stylesheet" media="screen" /> -->
  
    
@@ -151,11 +155,17 @@ body, html {
   width: 100%;
   height: 100%;
  
-  background: #213065;
-  /* background: -moz-radial-gradient(center, ellipse cover, #b72424 0%, #492727 100%);
-  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#b72424), color-stop(100%,#492727));
-  background: -webkit-radial-gradient(center, ellipse cover, #b72424 0%,#492727 100%);
-  background: radial-gradient(center, ellipse cover, #b72424 0%,#492727 100%); */
+  background: #1d2a59;
+  background: -moz-radial-gradient(center, ellipse cover, #324999 0%, #1d2a59 100%);
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#324999), color-stop(100%,#1d2a59));
+  background: -webkit-radial-gradient(center, ellipse cover, #324999 0%,#1d2a59 100%);
+  background: radial-gradient(center, ellipse cover, #324999 0%,#1d2a59 100%);
+
+  /* background: -webkit-linear-gradient(top, rgb(203, 235, 219) 0%, rgb(55, 148, 192) 120%);
+  background: -moz-linear-gradient(top, rgb(203, 235, 219) 0%, rgb(55, 148, 192) 120%);
+  background: -o-linear-gradient(top, rgb(203, 235, 219) 0%, rgb(55, 148, 192) 120%);
+  background: -ms-linear-gradient(top, rgb(203, 235, 219) 0%, rgb(55, 148, 192) 120%);
+  background: linear-gradient(top, rgb(203, 235, 219) 0%, rgb(55, 148, 192) 120%); */
 }
  
 @keyframes spin {
@@ -186,6 +196,7 @@ button,select,input,text,bsbk{
   overflow: hidden;
 }
 text {
+  border-top: white 1px solid;
   background-color: #134112;
 }
 select {
@@ -193,6 +204,7 @@ select {
 }
 meter {
   background-color: #255B22;
+  color: #b72424;
 }
 button {
   background-color: #337936;
@@ -231,14 +243,19 @@ bsbk{
 input {
   background-color: #002906;
 }
+.trank {
+  background-color: beige;
+  width: 300px;
+  height: 400px;
+}
     </style>
     <script>
          
 const width = 500;
 const height = 1000;
 const quantity = 650;
-const types = [ 'text', 'select', 'progress', 'meter', 'button', 'radio', 'checkbox',"bsbk"];
-const greetings = [ '12月12','12月12','Merry Christmas','Merry Christmas','Merry Christmas','Merry Christmas','12月25','Merry Christmas','Happy Holidays' ];
+const types = [ 'text', 'select', 'button', 'radio', 'checkbox',"bsbk"];
+const greetings = [ '2021.12.12','Merry Christmas','Happy Holidays' ,"Wesołych Świąt","즐거운 성탄절 되세요","Glædelig jul","Frohe Weihnachten","С Рождеством","Joyeux Noël","Hyvää joulua","Vrolijk kerstfeest","Bon Nadal","God jul","Feliz Natal","God j","Selamat Hari Natal"];
 let tree = document.querySelector( '.tree' ),
   treeRotation = 0;
  
@@ -252,7 +269,10 @@ for( var i = 0; i < quantity; i++ ) {
   let element = null,
     type = types[ Math.floor( Math.random() * types.length ) ],
     greeting = greetings[ Math.floor( Math.random() * greetings.length ) ];
-    
+    greeting = ""
+    for (var kkk=0;kkk<10;kkk++){
+      greeting += greetings[ Math.floor( Math.random() * greetings.length ) ]+"  "
+    }
   let x = width/2,
     y = Math.round( Math.random() * height );
  
@@ -329,10 +349,7 @@ element.setAttribute("src", "http://gstorage.acbs.top/img/202112241112546.png")
 element.style.transform = "translate3d(150px, -155px, 0px)"
 tree.appendChild(element)
 
-element = document.createElement("div");
-element.setAttribute("class", "trank")
-element.style.transform = "translate3d(150px, -155px, 0px)"
-tree.appendChild(element)
+
 // Let it snow
 // for( var i = 0; i < 200; i++ ) {
 //   let element = document.createElement( 'input' );

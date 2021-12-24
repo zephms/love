@@ -5,7 +5,14 @@
 
   <meta charset="UTF-8">
 
-  <title>HTML5 Canvas粒子效果文字动画特效DEMO演示</title>
+  <title>爱你~</title>
+  <script>
+    var weses = new Date().getTime()/1000 - 1639238640;
+             var bsaday = 86400;
+             var bsahour = 3600;
+             var realday = parseInt(weses/bsaday)
+             document.title = "我们在一起的第"+realday+"天"
+  </script>
 
   <link rel="stylesheet" href="css/normalize.css">
 
@@ -19,9 +26,9 @@
 </div>
 <canvas class="canvas"></canvas>
 
-<div class="help">?</div> 
+<div style="display: none;" class="help">?</div> 
 
-<div class="ui">
+<div style="display: none;" class="ui">
   <input class="ui-input" type="text" />
   <span class="ui-return">↵</span>
 </div>
