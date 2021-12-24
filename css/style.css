@@ -44,12 +44,17 @@ body,
   background: -webkit-linear-gradient(top, rgb(163, 235, 189) 0%, rgb(16, 93, 145) 110%);
   background: -webkit-linear-gradient(top, rgb(165, 103, 189) 0%, rgb(75, 233, 214) 120%);
   */
+  background: #1d2a59;
+  background: -moz-radial-gradient(center, ellipse cover, #324999 0%, #1d2a59 100%);
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#324999), color-stop(100%,#1d2a59));
+  background: -webkit-radial-gradient(center, ellipse cover, #324999 0%,#1d2a59 100%);
+  background: radial-gradient(center, ellipse cover, #324999 0%,#1d2a59 100%);
 
-  background: -webkit-linear-gradient(top, rgb(203, 235, 219) 0%, rgb(55, 148, 192) 120%);
+  /* background: -webkit-linear-gradient(top, rgb(203, 235, 219) 0%, rgb(55, 148, 192) 120%);
   background: -moz-linear-gradient(top, rgb(203, 235, 219) 0%, rgb(55, 148, 192) 120%);
   background: -o-linear-gradient(top, rgb(203, 235, 219) 0%, rgb(55, 148, 192) 120%);
   background: -ms-linear-gradient(top, rgb(203, 235, 219) 0%, rgb(55, 148, 192) 120%);
-  background: linear-gradient(top, rgb(203, 235, 219) 0%, rgb(55, 148, 192) 120%);
+  background: linear-gradient(top, rgb(203, 235, 219) 0%, rgb(55, 148, 192) 120%); */
 }
 
 .body--ready .overlay {
